@@ -4,8 +4,18 @@ import Create from "./pages/Create";
 
 export const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/notes',
         element: <Notes />,
+        children: []
+    },
+    {
+        path: '/',
+        element: <Navigate to ="/notes" /> ,
+        children: []
+    },
+    {
+        path: '*',
+        element: <Navigate to="/notes"/>,
         children: []
     },
     {
